@@ -1,5 +1,6 @@
 package repository.impl;
 
+import java.util.List;
 import model.Book;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,7 +8,6 @@ import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import repository.BookRepository;
-import java.util.List;
 
 @Repository
 public class BookRepositoryImpl implements BookRepository {
@@ -17,6 +17,7 @@ public class BookRepositoryImpl implements BookRepository {
     public BookRepositoryImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
+
     @Override
     public Book save(Book book) {
         Session session = null;
@@ -31,7 +32,7 @@ public class BookRepositoryImpl implements BookRepository {
             if (transaction != null) {
                 transaction.rollback();
             }
-            throw  new RuntimeException("Can't insert book into DB: " + book);
+            throw new RuntimeException("Can't insert book into DB: " + book);
         } finally {
             if (session != null) {
                 session.close();
@@ -41,11 +42,11 @@ public class BookRepositoryImpl implements BookRepository {
 
     @Override
     public List<Book> findAll() {
-        try (Session session = sessionFactory.openSession()){
+        try (Session session = sessionFactory.openSession()) {
             return session.createQuery(
                     "SELECT b FROM Book b", Book.class).getResultList();
         } catch (Exception e) {
-            throw  new RuntimeException("Can't get all book from DB", e);
+            throw new RuntimeException("Can't get all book from DB", e);
         }
     }
 }
