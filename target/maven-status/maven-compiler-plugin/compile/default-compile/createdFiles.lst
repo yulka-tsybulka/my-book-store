@@ -1,6 +1,13 @@
-repository\impl\BookRepositoryImpl.class
-MyBookStoreApplication.class
-model\Book.class
+dto\BookDto.class
+dto\CreateBookRequestDto.class
 repository\BookRepository.class
+mapper\impl\BookMapperImpl.class
 service\BookService.class
 service\impl\BookServiceImpl.class
+config\MapperConfig.class
+repository\impl\BookRepositoryImpl.class
+MyBookStoreApplication.class
+controller\BookController.class
+model\Book.class
+exception\EntityNotFoundException.class
+mapper\BookMapper.class
