@@ -28,7 +28,7 @@ public class BookRepositoryImpl implements BookRepository {
             if (transaction != null && transaction.isActive()) {
                 transaction.rollback();
             }
-            throw new RuntimeException("Can't insert book into DB: " + book);
+            throw new RuntimeException("Can't save book into DB: " + book);
         }
     }
 
