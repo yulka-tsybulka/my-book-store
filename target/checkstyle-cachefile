@@ -1,6 +1,6 @@
-#Mon Nov 06 19:18:20 EET 2023
+#Tue Nov 07 14:21:49 EET 2023
 configuration*?=8367E4E53F468F122D0AFDBCF464E88EA1748D53
-C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\dto\\BookDto.java=1699186833828
+C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\dto\\BookDto.java=1699359697571
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\model\\Book.java=1698847756037
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\repository\\impl\\BookRepositoryImpl.java=1699187686395
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\dto\\CreateBookRequestDto.java=1699186858953
@@ -9,7 +9,7 @@ C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\test\\java\\BookStoreApplicat
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\config\\MapperConfig.java=1699014563804
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\resources\\application.properties=1699011149914
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\mapper\\BookMapper.java=1699186893008
-C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\service\\impl\\BookServiceImpl.java=1699187727994
+C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\service\\impl\\BookServiceImpl.java=1699358875795
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\MyBookStoreApplication.java=1699187175411
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\exception\\EntityNotFoundException.java=1699018019140
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\repository\\BookRepository.java=1699187184113
