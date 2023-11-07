@@ -1,9 +1,9 @@
-#Tue Nov 07 14:21:49 EET 2023
+#Tue Nov 07 14:59:30 EET 2023
 configuration*?=8367E4E53F468F122D0AFDBCF464E88EA1748D53
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\dto\\BookDto.java=1699359697571
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\model\\Book.java=1698847756037
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\repository\\impl\\BookRepositoryImpl.java=1699187686395
-C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\dto\\CreateBookRequestDto.java=1699186858953
+C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\dto\\CreateBookRequestDto.java=1699360885252
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\controller\\BookController.java=1699187847638
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\test\\java\\BookStoreApplicationTests.java=1699291087010
 C\:\\Users\\DOM\\IdeaProjects\\my_book_store\\src\\main\\java\\config\\MapperConfig.java=1699014563804
