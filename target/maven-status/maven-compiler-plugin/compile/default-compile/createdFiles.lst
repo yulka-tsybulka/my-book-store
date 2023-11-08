@@ -1,0 +1,6 @@
+repository\impl\BookRepositoryImpl.class
+MyBookStoreApplication.class
+model\Book.class
+repository\BookRepository.class
+service\BookService.class
+service\impl\BookServiceImpl.class
