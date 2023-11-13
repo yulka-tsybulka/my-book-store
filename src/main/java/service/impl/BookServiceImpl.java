@@ -37,4 +37,9 @@ public class BookServiceImpl implements BookService {
                         "Can't find book by id " + id)
                 );
     }
+
+    @Override
+    public void deleteById(Long id) {
+        bookRepository.deleteById(id);
+    }
 }
