@@ -16,6 +16,4 @@ public class BookDto {
     private String description;
 
     private String coverImage;
-
-    private boolean isDeleted;
 }
