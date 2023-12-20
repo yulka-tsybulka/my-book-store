@@ -24,14 +24,7 @@ public class UserServiceImpl implements UserService {
         if (userRepository.findByEmail(requestDto.getEmail()).isPresent()) {
             throw new RegistrationException("Can`t register user");
         }
-        User user = new User();
-        user.setEmail(requestDto.getEmail());
-        user.setFirstName(requestDto.getFirstName());
-        user.setLastName(requestDto.getLastName());
-        user.setPassword(requestDto.getPassword());
-        user.setShippingAddress(requestDto.getShippingAddress());
-        User savedUser = userRepository.save(user);
-        return mapper.toDto(savedUser);
+        return mapper.toDto(userRepository.save(toUserModel(requestDto)));
     }
 
     @Override
@@ -39,5 +32,15 @@ public class UserServiceImpl implements UserService {
         return mapper.toDto(userRepository.findByEmail(email)
                 .orElseThrow(() -> new EntityNotFoundException("User not found with email: "
                         + email)));
+    }
+
+    private User toUserModel(UserRegistrationRequestDto requestDto) {
+        User user = new User();
+        user.setEmail(requestDto.getEmail());
+        user.setFirstName(requestDto.getFirstName());
+        user.setLastName(requestDto.getLastName());
+        user.setPassword(requestDto.getPassword());
+        user.setShippingAddress(requestDto.getShippingAddress());
+        return user;
     }
 }
