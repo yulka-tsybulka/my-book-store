@@ -1,5 +1,6 @@
 package controller;
 
+import dto.UserLoginRequestDto;
 import dto.UserRegistrationRequestDto;
 import dto.UserResponseDto;
 import exception.RegistrationException;

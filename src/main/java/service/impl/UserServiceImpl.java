@@ -7,6 +7,7 @@ import exception.RegistrationException;
 import lombok.RequiredArgsConstructor;
 import mapper.UserMapper;
 import model.User;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import repository.user.UserRepository;
 import service.UserService;
@@ -17,6 +18,8 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     private final UserMapper mapper;
+
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public UserResponseDto register(UserRegistrationRequestDto requestDto)
@@ -39,7 +42,7 @@ public class UserServiceImpl implements UserService {
         user.setEmail(requestDto.getEmail());
         user.setFirstName(requestDto.getFirstName());
         user.setLastName(requestDto.getLastName());
-        user.setPassword(requestDto.getPassword());
+        user.setPassword(passwordEncoder.encode(requestDto.getPassword()));
         user.setShippingAddress(requestDto.getShippingAddress());
         return user;
     }
