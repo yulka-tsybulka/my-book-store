@@ -27,24 +27,17 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(unique = true, nullable = false)
     private String email;
-
     @Column(nullable = false)
     private String password;
-
     @Column(nullable = false)
     private String firstName;
-
     @Column(nullable = false)
     private String lastName;
-
     private String shippingAddress;
-
     @Column(nullable = false)
     private boolean isDeleted = false;
-
     @ManyToMany
     @JoinTable(
             name = "users_roles",

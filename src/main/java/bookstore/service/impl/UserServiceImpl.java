@@ -1,7 +1,7 @@
 package bookstore.service.impl;
 
-import bookstore.dto.UserRegistrationRequestDto;
-import bookstore.dto.UserResponseDto;
+import bookstore.dto.user.UserRegistrationRequestDto;
+import bookstore.dto.user.UserResponseDto;
 import bookstore.exception.EntityNotFoundException;
 import bookstore.exception.RegistrationException;
 import bookstore.mapper.UserMapper;
@@ -16,9 +16,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
-
     private final UserMapper mapper;
-
     private final PasswordEncoder passwordEncoder;
 
     @Override

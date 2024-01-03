@@ -1,4 +1,4 @@
-package bookstore.dto;
+package bookstore.dto.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.AssertTrue;
@@ -13,21 +13,16 @@ public class UserRegistrationRequestDto {
     @NotBlank
     @Email(message = "Please provide a valid email address")
     private String email;
-
     @NotBlank
     @Size(min = 4, max = 10, message = "Password must be at least 4 characters long")
     private String password;
-
     @NotBlank
     @Size(min = 4, max = 10, message = "Password must be at least 4 characters long")
     private String repeatPassword;
-
     @NotBlank
     private String firstName;
-
     @NotBlank
     private String lastName;
-
     private String shippingAddress;
 
     @AssertTrue(message = "Passwords do not match")
