@@ -13,3 +13,7 @@ databaseChangeLog:
       file: db/changelog/changes/06-add-admin-user-to-db.yaml
   - include:
       file: db/changelog/changes/07-modify-price-column-type-book-table.yaml
+  - include:
+      file: db/changelog/changes/08-create-category-table.yaml
+  - include:
+      file: db/changelog/changes/09-add-books_categories-table.yaml

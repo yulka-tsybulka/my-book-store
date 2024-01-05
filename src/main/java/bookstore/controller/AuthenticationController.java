@@ -7,6 +7,7 @@ import bookstore.dto.user.UserResponseDto;
 import bookstore.exception.RegistrationException;
 import bookstore.security.AuthenticationService;
 import bookstore.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,11 +23,13 @@ public class AuthenticationController {
     private final AuthenticationService authenticationService;
 
     @PostMapping("/login")
+    @Operation(summary = "User account login", description = "User account login")
     public UserLoginResponseDto login(@RequestBody @Valid UserLoginRequestDto request) {
         return authenticationService.authenticate(request);
     }
 
     @PostMapping("/registration")
+    @Operation(summary = "User registration", description = "User registration")
     public UserResponseDto register(@RequestBody @Valid UserRegistrationRequestDto request)
             throws RegistrationException {
         return userService.register(request);
