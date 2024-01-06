@@ -2,6 +2,7 @@ package bookstore.mapper;
 
 import bookstore.config.MapperConfig;
 import bookstore.dto.book.BookDto;
+import bookstore.dto.book.BookDtoWithoutCategoryIds;
 import bookstore.dto.book.CreateBookRequestDto;
 import bookstore.model.Book;
 import org.mapstruct.Mapper;
@@ -11,4 +12,6 @@ public interface BookMapper {
     BookDto toDto(Book book);
 
     Book toModel(CreateBookRequestDto requestDto);
+
+    BookDtoWithoutCategoryIds toDtoWithoutCategories(Book book);
 }
