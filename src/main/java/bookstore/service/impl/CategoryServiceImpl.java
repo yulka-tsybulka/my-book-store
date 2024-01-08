@@ -39,9 +39,9 @@ public class CategoryServiceImpl implements CategoryService {
         Category existingCategory = categoryRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException(
                         "Category with id " + id + " not found"));
-        existingCategory.setName(requestDto.getName());
-        existingCategory.setDescription(requestDto.getDescription());
-        return categoryMapper.toDto(categoryRepository.save(existingCategory));
+        Category category = categoryMapper.toModel(requestDto);
+        category.setId(existingCategory.getId());
+        return categoryMapper.toDto(categoryRepository.save(category));
     }
 
     @Override
