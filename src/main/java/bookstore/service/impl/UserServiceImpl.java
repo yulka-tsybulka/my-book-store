@@ -28,13 +28,6 @@ public class UserServiceImpl implements UserService {
         return mapper.toDto(userRepository.save(toUserModel(requestDto)));
     }
 
-    @Override
-    public UserResponseDto findByEmail(String email) {
-        return mapper.toDto(userRepository.findByEmail(email)
-                .orElseThrow(() -> new EntityNotFoundException("User not found with email: "
-                        + email)));
-    }
-
     private User toUserModel(UserRegistrationRequestDto requestDto) {
         User user = new User();
         user.setEmail(requestDto.getEmail());

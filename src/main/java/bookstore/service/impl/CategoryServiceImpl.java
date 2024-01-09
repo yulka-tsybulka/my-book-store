@@ -2,6 +2,7 @@ package bookstore.service.impl;
 
 import bookstore.dto.category.CategoryDto;
 import bookstore.dto.category.CreateCategoryRequestDto;
+import bookstore.exception.EntityNotFoundException;
 import bookstore.mapper.CategoryMapper;
 import bookstore.model.Category;
 import bookstore.repository.category.CategoryRepository;
@@ -23,7 +24,10 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public CategoryDto getById(Long id) {
-        return categoryMapper.toDto(categoryRepository.getReferenceById(id));
+        return categoryMapper.toDto(categoryRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(
+                        "Can't find category by id " + id)
+                ));
     }
 
     @Override

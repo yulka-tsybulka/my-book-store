@@ -28,7 +28,6 @@ public class CartItem {
     @EqualsAndHashCode.Exclude
     @JoinColumn(name = "shopping_cart_id", nullable = false)
     private ShoppingCart shoppingCart;
-    @Column(nullable = false)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     @ManyToOne
