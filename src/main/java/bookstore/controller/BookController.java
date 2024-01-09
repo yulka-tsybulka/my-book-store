@@ -3,6 +3,8 @@ package bookstore.controller;
 import bookstore.dto.book.BookDto;
 import bookstore.dto.book.BookSearchParameters;
 import bookstore.dto.book.CreateBookRequestDto;
+import bookstore.dto.category.CategoryDto;
+import bookstore.dto.category.CreateCategoryRequestDto;
 import bookstore.service.BookService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -12,14 +14,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
 
 @Tag(name = "Book management", description = "Endpoints for managing books")
 @RequiredArgsConstructor
@@ -30,8 +26,9 @@ public class BookController {
 
     @GetMapping
     @Operation(summary = "Get all books", description = "Get a list of all available books")
-    public List<BookDto> getAll(Pageable pageable) {
-        return bookService.findAll(pageable);
+    public List<BookDto> getAll(Authentication authentication, Pageable pageable) {
+        String email = authentication.getName();
+        return bookService.findAll(email, pageable);
     }
 
     @GetMapping("/{id}")
@@ -58,7 +55,16 @@ public class BookController {
     @GetMapping("/search")
     @Operation(summary = "Get the books by parameters",
             description = "Get the list of books by parameters: titles, authors")
-    public List<BookDto> searchBooks(BookSearchParameters searchParameters) {
-        return bookService.search(searchParameters);
+    public List<BookDto> searchBooks(BookSearchParameters searchParameters, Pageable pageable) {
+        return bookService.search(searchParameters, pageable);
+    }
+
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
+    @Operation(summary = "Update the book by id", description = "Update the book by id")
+    @PutMapping("/{id}")
+    public BookDto updateById(
+            @PathVariable Long id, @RequestBody @Valid CreateBookRequestDto requestDto
+    ) {
+        return bookService.updateById(id, requestDto);
     }
 }

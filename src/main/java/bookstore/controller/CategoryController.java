@@ -1,6 +1,7 @@
 package bookstore.controller;
 
 import bookstore.dto.book.BookDto;
+import bookstore.dto.book.BookDtoWithoutCategoryIds;
 import bookstore.dto.category.CategoryDto;
 import bookstore.dto.category.CreateCategoryRequestDto;
 import bookstore.service.BookService;
@@ -66,7 +67,7 @@ public class CategoryController {
 
     @GetMapping("/{id}/books")
     @Operation(summary = "Get books by category", description = "Get books by category")
-    public List<BookDto> getBooksByCategoryId(@PathVariable Long id) {
-        return bookService.findAllByCategoryId(id);
+    public List<BookDtoWithoutCategoryIds> getBooksByCategoryId(@PathVariable Long id) {
+        return bookService.findBooksByCategoryId(id);
     }
 }
