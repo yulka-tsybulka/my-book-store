@@ -1,12 +1,12 @@
 package bookstore.controller;
 
-import bookstore.dto.book.BookDto;
 import bookstore.dto.book.BookDtoWithoutCategoryIds;
 import bookstore.dto.category.CategoryDto;
 import bookstore.dto.category.CreateCategoryRequestDto;
 import bookstore.service.BookService;
 import bookstore.service.CategoryService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -22,6 +22,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+@Tag(name = "Category management",
+        description = "Endpoints for managing category of books")
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/categories")
