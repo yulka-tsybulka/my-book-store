@@ -1,6 +1,6 @@
 package bookstore.dto.order;
 
-import bookstore.model.Status;
+import bookstore.model.Order;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -13,5 +13,5 @@ public class OrderDto {
     private Set<OrderItemDto> orderItems;
     private LocalDateTime orderDate;
     private BigDecimal total;
-    private Status status;
+    private Order.Status status;
 }

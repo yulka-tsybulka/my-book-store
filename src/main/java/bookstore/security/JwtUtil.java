@@ -41,9 +41,13 @@ public class JwtUtil {
                     .setSigningKey(secret)
                     .build()
                     .parseClaimsJws(token);
-            return !claimsJws.getBody().getExpiration().before(new Date());
+            Date expiration = claimsJws.getBody().getExpiration();
+            if (expiration == null) {
+                throw new RuntimeException("This token don't have expiration");
+            }
+            return !expiration.before(new Date());
         } catch (JwtException | IllegalArgumentException e) {
-            throw new JwtException("Expired or invalid token");
+            throw new JwtException("Expired or invalid JWT token");
         }
     }
 

@@ -13,6 +13,8 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 import org.springframework.security.core.GrantedAuthority;
@@ -27,16 +29,18 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true, nullable = false)
+    @Column(name = "email", unique = true, nullable = false)
     private String email;
-    @Column(nullable = false)
+    @Column(name = "password", nullable = false)
     private String password;
-    @Column(nullable = false)
+    @Column(name = "first_name", nullable = false)
     private String firstName;
-    @Column(nullable = false)
+    @Column(name = "last_name", nullable = false)
     private String lastName;
+
+    @Column(name = "shipping_address")
     private String shippingAddress;
-    @Column(nullable = false)
+    @Column(name = "is_deleted", nullable = false)
     private boolean isDeleted = false;
     @ManyToMany
     @JoinTable(
@@ -44,6 +48,8 @@ public class User implements UserDetails {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     private Set<Role> roles = new HashSet<>();
 
     @Override
@@ -63,17 +69,17 @@ public class User implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return true;
+        return !isDeleted;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return true;
+        return !isDeleted;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return true;
+        return !isDeleted;
     }
 
     @Override

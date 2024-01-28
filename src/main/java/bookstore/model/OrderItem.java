@@ -41,6 +41,6 @@ public class OrderItem {
     private int quantity;
     @Column(nullable = false)
     private BigDecimal price;
-    @Column(nullable = false)
+    @Column(name = "is_deleted", nullable = false)
     private boolean isDeleted = false;
 }

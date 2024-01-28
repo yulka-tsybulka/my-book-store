@@ -1,11 +1,11 @@
 package bookstore.dto.order;
 
-import bookstore.model.Status;
+import bookstore.model.Order;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
 public class UpdateStatusRequestDto {
     @NotNull(message = "Can't be empty")
-    private Status status;
+    private Order.Status status;
 }

@@ -35,6 +35,6 @@ public class ShoppingCart {
     @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy = "shoppingCart")
     private Set<CartItem> cartItems = new HashSet<>();
-    @Column(nullable = false)
+    @Column(name = "is_deleted", nullable = false)
     private boolean isDeleted = false;
 }

@@ -27,16 +27,17 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false)
+    @Column(name = "title", nullable = false)
     private String title;
-    @Column(nullable = false)
+    @Column(name = "author", nullable = false)
     private String author;
-    @Column(unique = true, nullable = false)
+    @Column(name = "isbn", unique = true, nullable = false)
     private String isbn;
-    @Column(nullable = false)
+    @Column(name = "price", nullable = false)
     private BigDecimal price;
+    @Column(name = "description")
     private String description;
-    @Column(name = "coverImage")
+    @Column(name = "cover_image")
     private String coverImage;
     @ManyToMany
     @JoinTable(
@@ -47,7 +48,7 @@ public class Book {
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Set<Category> categories = new HashSet<>();
-    @Column(nullable = false)
+    @Column(name = "is_deleted", nullable = false)
     private boolean isDeleted = false;
 
     public Book(Long id) {

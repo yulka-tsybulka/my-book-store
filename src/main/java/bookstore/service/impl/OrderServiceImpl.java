@@ -12,7 +12,6 @@ import bookstore.model.CartItem;
 import bookstore.model.Order;
 import bookstore.model.OrderItem;
 import bookstore.model.ShoppingCart;
-import bookstore.model.Status;
 import bookstore.model.User;
 import bookstore.repository.order.OrderRepository;
 import bookstore.repository.orderitem.OrderItemRepository;
@@ -98,7 +97,7 @@ public class OrderServiceImpl implements OrderService {
                         "There is not found user with id " + userId));
         Order order = new Order();
         order.setUser(user);
-        order.setStatus(Status.PENDING);
+        order.setStatus(Order.Status.PENDING);
         Set<OrderItem> orderItems = new HashSet<>();
         Set<CartItem> cartItems = shoppingCart.getCartItems();
         if (cartItems.isEmpty()) {
