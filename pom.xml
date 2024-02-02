@@ -117,7 +117,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-docker-compose</artifactId>
         </dependency>
-        </dependencies>
+    </dependencies>
 
     <groupId>mate.academy</groupId>
     <artifactId>book-shop</artifactId>
