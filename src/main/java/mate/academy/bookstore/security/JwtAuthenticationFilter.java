@@ -1,4 +1,4 @@
-package bookstore.security;
+package mate.academy.bookstore.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

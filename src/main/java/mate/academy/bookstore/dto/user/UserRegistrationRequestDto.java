@@ -1,4 +1,4 @@
-package bookstore.dto.user;
+package mate.academy.bookstore.dto.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.AssertTrue;

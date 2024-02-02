@@ -1,14 +1,14 @@
-package bookstore.service.impl;
+package mate.academy.bookstore.service.impl;
 
-import bookstore.dto.category.CategoryDto;
-import bookstore.dto.category.CreateCategoryRequestDto;
-import bookstore.exception.EntityNotFoundException;
-import bookstore.mapper.CategoryMapper;
-import bookstore.model.Category;
-import bookstore.repository.category.CategoryRepository;
-import bookstore.service.CategoryService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import mate.academy.bookstore.dto.category.CategoryDto;
+import mate.academy.bookstore.dto.category.CreateCategoryRequestDto;
+import mate.academy.bookstore.exception.EntityNotFoundException;
+import mate.academy.bookstore.mapper.CategoryMapper;
+import mate.academy.bookstore.model.Category;
+import mate.academy.bookstore.repository.category.CategoryRepository;
+import mate.academy.bookstore.service.CategoryService;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor

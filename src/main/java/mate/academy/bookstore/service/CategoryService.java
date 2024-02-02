@@ -1,8 +1,8 @@
-package bookstore.service;
+package mate.academy.bookstore.service;
 
-import bookstore.dto.category.CategoryDto;
-import bookstore.dto.category.CreateCategoryRequestDto;
 import java.util.List;
+import mate.academy.bookstore.dto.category.CategoryDto;
+import mate.academy.bookstore.dto.category.CreateCategoryRequestDto;
 
 public interface CategoryService {
     CategoryDto save(CreateCategoryRequestDto requestDto);

@@ -1,4 +1,4 @@
-package bookstore.config;
+package mate.academy.bookstore.config;
 
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.NullValueCheckStrategy;

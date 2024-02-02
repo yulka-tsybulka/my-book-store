@@ -1,10 +1,10 @@
-package bookstore.repository.book;
+package mate.academy.bookstore.repository.book;
 
-import bookstore.model.Book;
-import bookstore.repository.SpecificationProvider;
-import bookstore.repository.SpecificationProviderManager;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import mate.academy.bookstore.model.Book;
+import mate.academy.bookstore.repository.SpecificationProvider;
+import mate.academy.bookstore.repository.SpecificationProviderManager;
 import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor

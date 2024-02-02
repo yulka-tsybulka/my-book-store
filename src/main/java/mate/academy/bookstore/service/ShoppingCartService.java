@@ -1,8 +1,8 @@
-package bookstore.service;
+package mate.academy.bookstore.service;
 
-import bookstore.dto.shoppingcart.AddToCartRequestDto;
-import bookstore.dto.shoppingcart.ShoppingCartDto;
-import bookstore.dto.shoppingcart.UpdateQuantityBookRequestDto;
+import mate.academy.bookstore.dto.shoppingcart.AddToCartRequestDto;
+import mate.academy.bookstore.dto.shoppingcart.ShoppingCartDto;
+import mate.academy.bookstore.dto.shoppingcart.UpdateQuantityBookRequestDto;
 
 public interface ShoppingCartService {
     ShoppingCartDto addToCart(Long userId, AddToCartRequestDto bookRequestDto);

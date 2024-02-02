@@ -1,7 +1,7 @@
-package bookstore.repository.shoppingcart;
+package mate.academy.bookstore.repository.shoppingcart;
 
-import bookstore.model.ShoppingCart;
 import java.util.Optional;
+import mate.academy.bookstore.model.ShoppingCart;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;

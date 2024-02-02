@@ -1,8 +1,8 @@
-package bookstore.service;
+package mate.academy.bookstore.service;
 
-import bookstore.dto.user.UserRegistrationRequestDto;
-import bookstore.dto.user.UserResponseDto;
-import bookstore.exception.RegistrationException;
+import mate.academy.bookstore.dto.user.UserRegistrationRequestDto;
+import mate.academy.bookstore.dto.user.UserResponseDto;
+import mate.academy.bookstore.exception.RegistrationException;
 
 public interface UserService {
     UserResponseDto register(UserRegistrationRequestDto requestDto)

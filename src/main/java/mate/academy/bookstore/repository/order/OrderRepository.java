@@ -1,7 +1,7 @@
-package bookstore.repository.order;
+package mate.academy.bookstore.repository.order;
 
-import bookstore.model.Order;
 import java.util.Optional;
+import mate.academy.bookstore.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;

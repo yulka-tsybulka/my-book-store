@@ -1,7 +1,7 @@
-package bookstore.config;
+package mate.academy.bookstore.config;
 
-import bookstore.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
+import mate.academy.bookstore.security.JwtAuthenticationFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

@@ -1,6 +1,6 @@
-package bookstore.repository.cartitem;
+package mate.academy.bookstore.repository.cartitem;
 
-import bookstore.model.CartItem;
+import mate.academy.bookstore.model.CartItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;

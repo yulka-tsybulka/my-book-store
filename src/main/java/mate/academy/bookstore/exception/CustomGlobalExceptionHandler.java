@@ -1,4 +1,4 @@
-package bookstore.exception;
+package mate.academy.bookstore.exception;
 
 import java.time.LocalDateTime;
 import java.util.LinkedHashMap;
@@ -45,8 +45,9 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
         return e.getDefaultMessage();
     }
 
-    @ExceptionHandler(EntityNotFoundException.class)
-    public ResponseEntity<Object> handleEntityNotFoundException(EntityNotFoundException ex) {
+    @ExceptionHandler(mate.academy.bookstore.exception.EntityNotFoundException.class)
+    public ResponseEntity<Object> handleEntityNotFoundException(
+            mate.academy.bookstore.exception.EntityNotFoundException ex) {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now());
         body.put("status", HttpStatus.NOT_FOUND.value());
@@ -55,8 +56,9 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);
     }
 
-    @ExceptionHandler(RegistrationException.class)
-    public ResponseEntity<Object> handleRegistrationException(RegistrationException ex) {
+    @ExceptionHandler(mate.academy.bookstore.exception.RegistrationException.class)
+    public ResponseEntity<Object> handleRegistrationException(
+            mate.academy.bookstore.exception.RegistrationException ex) {
         Map<String, Object> body = new LinkedHashMap<>();
         body.put("timestamp", LocalDateTime.now());
         body.put("status", HttpStatus.BAD_REQUEST.value());

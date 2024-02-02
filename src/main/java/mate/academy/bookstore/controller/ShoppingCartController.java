@@ -1,14 +1,14 @@
-package bookstore.controller;
+package mate.academy.bookstore.controller;
 
-import bookstore.dto.shoppingcart.AddToCartRequestDto;
-import bookstore.dto.shoppingcart.ShoppingCartDto;
-import bookstore.dto.shoppingcart.UpdateQuantityBookRequestDto;
-import bookstore.model.User;
-import bookstore.service.ShoppingCartService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import mate.academy.bookstore.dto.shoppingcart.AddToCartRequestDto;
+import mate.academy.bookstore.dto.shoppingcart.ShoppingCartDto;
+import mate.academy.bookstore.dto.shoppingcart.UpdateQuantityBookRequestDto;
+import mate.academy.bookstore.model.User;
+import mate.academy.bookstore.service.ShoppingCartService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.DeleteMapping;

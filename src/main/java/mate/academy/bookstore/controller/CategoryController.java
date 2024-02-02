@@ -1,15 +1,15 @@
-package bookstore.controller;
+package mate.academy.bookstore.controller;
 
-import bookstore.dto.book.BookDtoWithoutCategoryIds;
-import bookstore.dto.category.CategoryDto;
-import bookstore.dto.category.CreateCategoryRequestDto;
-import bookstore.service.BookService;
-import bookstore.service.CategoryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import mate.academy.bookstore.dto.book.BookDtoWithoutCategoryIds;
+import mate.academy.bookstore.dto.category.CategoryDto;
+import mate.academy.bookstore.dto.category.CreateCategoryRequestDto;
+import mate.academy.bookstore.service.BookService;
+import mate.academy.bookstore.service.CategoryService;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;

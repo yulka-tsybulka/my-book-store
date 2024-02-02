@@ -1,4 +1,4 @@
-package bookstore.validation;
+package mate.academy.bookstore.validation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

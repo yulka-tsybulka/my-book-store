@@ -1,8 +1,8 @@
-package bookstore.repository.book.spec;
+package mate.academy.bookstore.repository.book.spec;
 
-import bookstore.model.Book;
-import bookstore.repository.SpecificationProvider;
 import java.util.Arrays;
+import mate.academy.bookstore.model.Book;
+import mate.academy.bookstore.repository.SpecificationProvider;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;
 

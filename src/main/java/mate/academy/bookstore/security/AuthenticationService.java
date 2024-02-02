@@ -1,8 +1,8 @@
-package bookstore.security;
+package mate.academy.bookstore.security;
 
-import bookstore.dto.user.UserLoginRequestDto;
-import bookstore.dto.user.UserLoginResponseDto;
 import lombok.RequiredArgsConstructor;
+import mate.academy.bookstore.dto.user.UserLoginRequestDto;
+import mate.academy.bookstore.dto.user.UserLoginResponseDto;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

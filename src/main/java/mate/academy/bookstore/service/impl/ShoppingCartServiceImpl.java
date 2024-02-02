@@ -1,20 +1,20 @@
-package bookstore.service.impl;
+package mate.academy.bookstore.service.impl;
 
-import bookstore.dto.shoppingcart.AddToCartRequestDto;
-import bookstore.dto.shoppingcart.ShoppingCartDto;
-import bookstore.dto.shoppingcart.UpdateQuantityBookRequestDto;
-import bookstore.exception.EntityNotFoundException;
-import bookstore.mapper.ShoppingCartMapper;
-import bookstore.model.Book;
-import bookstore.model.CartItem;
-import bookstore.model.ShoppingCart;
-import bookstore.model.User;
-import bookstore.repository.book.BookRepository;
-import bookstore.repository.cartitem.CartItemRepository;
-import bookstore.repository.shoppingcart.ShoppingCartRepository;
-import bookstore.repository.user.UserRepository;
-import bookstore.service.ShoppingCartService;
 import lombok.RequiredArgsConstructor;
+import mate.academy.bookstore.dto.shoppingcart.AddToCartRequestDto;
+import mate.academy.bookstore.dto.shoppingcart.ShoppingCartDto;
+import mate.academy.bookstore.dto.shoppingcart.UpdateQuantityBookRequestDto;
+import mate.academy.bookstore.exception.EntityNotFoundException;
+import mate.academy.bookstore.mapper.ShoppingCartMapper;
+import mate.academy.bookstore.model.Book;
+import mate.academy.bookstore.model.CartItem;
+import mate.academy.bookstore.model.ShoppingCart;
+import mate.academy.bookstore.model.User;
+import mate.academy.bookstore.repository.book.BookRepository;
+import mate.academy.bookstore.repository.cartitem.CartItemRepository;
+import mate.academy.bookstore.repository.shoppingcart.ShoppingCartRepository;
+import mate.academy.bookstore.repository.user.UserRepository;
+import mate.academy.bookstore.service.ShoppingCartService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

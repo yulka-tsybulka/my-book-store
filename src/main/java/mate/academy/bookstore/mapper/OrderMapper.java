@@ -1,8 +1,8 @@
-package bookstore.mapper;
+package mate.academy.bookstore.mapper;
 
-import bookstore.config.MapperConfig;
-import bookstore.dto.order.OrderDto;
-import bookstore.model.Order;
+import mate.academy.bookstore.config.MapperConfig;
+import mate.academy.bookstore.dto.order.OrderDto;
+import mate.academy.bookstore.model.Order;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

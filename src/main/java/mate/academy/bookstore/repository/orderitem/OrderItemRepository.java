@@ -1,7 +1,7 @@
-package bookstore.repository.orderitem;
+package mate.academy.bookstore.repository.orderitem;
 
-import bookstore.model.OrderItem;
 import java.util.Optional;
+import mate.academy.bookstore.model.OrderItem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;

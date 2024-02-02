@@ -1,13 +1,13 @@
-package bookstore.mapper;
+package mate.academy.bookstore.mapper;
 
-import bookstore.config.MapperConfig;
-import bookstore.dto.book.BookDto;
-import bookstore.dto.book.BookDtoWithoutCategoryIds;
-import bookstore.dto.book.CreateBookRequestDto;
-import bookstore.model.Book;
-import bookstore.model.Category;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import mate.academy.bookstore.config.MapperConfig;
+import mate.academy.bookstore.dto.book.BookDto;
+import mate.academy.bookstore.dto.book.BookDtoWithoutCategoryIds;
+import mate.academy.bookstore.dto.book.CreateBookRequestDto;
+import mate.academy.bookstore.model.Book;
+import mate.academy.bookstore.model.Category;
 import org.mapstruct.AfterMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;

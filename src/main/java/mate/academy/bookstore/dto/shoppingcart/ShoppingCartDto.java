@@ -1,4 +1,4 @@
-package bookstore.dto.shoppingcart;
+package mate.academy.bookstore.dto.shoppingcart;
 
 import java.util.Set;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package bookstore.security;
+package mate.academy.bookstore.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;

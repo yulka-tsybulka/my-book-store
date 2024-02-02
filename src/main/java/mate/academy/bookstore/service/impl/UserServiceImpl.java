@@ -1,15 +1,15 @@
-package bookstore.service.impl;
+package mate.academy.bookstore.service.impl;
 
-import bookstore.dto.user.UserRegistrationRequestDto;
-import bookstore.dto.user.UserResponseDto;
-import bookstore.exception.RegistrationException;
-import bookstore.mapper.UserMapper;
-import bookstore.model.Role;
-import bookstore.model.User;
-import bookstore.repository.user.UserRepository;
-import bookstore.service.UserService;
 import java.util.Set;
 import lombok.RequiredArgsConstructor;
+import mate.academy.bookstore.dto.user.UserRegistrationRequestDto;
+import mate.academy.bookstore.dto.user.UserResponseDto;
+import mate.academy.bookstore.exception.RegistrationException;
+import mate.academy.bookstore.mapper.UserMapper;
+import mate.academy.bookstore.model.Role;
+import mate.academy.bookstore.model.User;
+import mate.academy.bookstore.repository.user.UserRepository;
+import mate.academy.bookstore.service.UserService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

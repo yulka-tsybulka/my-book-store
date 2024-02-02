@@ -1,6 +1,5 @@
-package bookstore.dto.book;
+package mate.academy.bookstore.dto.book;
 
-import bookstore.validation.Isbn;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Size;
@@ -9,6 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 import lombok.Data;
 import lombok.NonNull;
+import mate.academy.bookstore.validation.Isbn;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)

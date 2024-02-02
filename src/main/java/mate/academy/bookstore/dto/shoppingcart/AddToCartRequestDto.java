@@ -1,4 +1,4 @@
-package bookstore.dto.shoppingcart;
+package mate.academy.bookstore.dto.shoppingcart;
 
 import jakarta.validation.constraints.Positive;
 import lombok.Data;

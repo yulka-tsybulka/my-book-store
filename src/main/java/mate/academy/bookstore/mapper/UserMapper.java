@@ -1,9 +1,9 @@
-package bookstore.mapper;
+package mate.academy.bookstore.mapper;
 
-import bookstore.config.MapperConfig;
-import bookstore.dto.user.UserRegistrationRequestDto;
-import bookstore.dto.user.UserResponseDto;
-import bookstore.model.User;
+import mate.academy.bookstore.config.MapperConfig;
+import mate.academy.bookstore.dto.user.UserRegistrationRequestDto;
+import mate.academy.bookstore.dto.user.UserResponseDto;
+import mate.academy.bookstore.model.User;
 import org.mapstruct.Mapper;
 
 @Mapper(config = MapperConfig.class)

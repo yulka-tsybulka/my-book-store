@@ -1,17 +1,17 @@
-package bookstore.controller;
+package mate.academy.bookstore.controller;
 
-import bookstore.dto.order.OrderDto;
-import bookstore.dto.order.OrderItemDto;
-import bookstore.dto.order.PlaceOrderRequestDto;
-import bookstore.dto.order.UpdateStatusRequestDto;
-import bookstore.model.User;
-import bookstore.service.OrderService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import java.util.Set;
 import lombok.RequiredArgsConstructor;
+import mate.academy.bookstore.dto.order.OrderDto;
+import mate.academy.bookstore.dto.order.OrderItemDto;
+import mate.academy.bookstore.dto.order.PlaceOrderRequestDto;
+import mate.academy.bookstore.dto.order.UpdateStatusRequestDto;
+import mate.academy.bookstore.model.User;
+import mate.academy.bookstore.service.OrderService;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;

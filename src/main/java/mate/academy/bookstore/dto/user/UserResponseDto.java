@@ -1,4 +1,4 @@
-package bookstore.dto.user;
+package mate.academy.bookstore.dto.user;
 
 import lombok.Data;
 

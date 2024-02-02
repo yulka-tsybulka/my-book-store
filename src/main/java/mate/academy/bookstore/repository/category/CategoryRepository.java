@@ -1,6 +1,6 @@
-package bookstore.repository.category;
+package mate.academy.bookstore.repository.category;
 
-import bookstore.model.Category;
+import mate.academy.bookstore.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;

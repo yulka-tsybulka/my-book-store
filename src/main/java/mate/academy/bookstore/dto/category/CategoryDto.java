@@ -1,4 +1,4 @@
-package bookstore.dto.category;
+package mate.academy.bookstore.dto.category;
 
 import lombok.Data;
 

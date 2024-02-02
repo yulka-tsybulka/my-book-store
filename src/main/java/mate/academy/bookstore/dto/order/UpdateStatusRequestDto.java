@@ -1,8 +1,8 @@
-package bookstore.dto.order;
+package mate.academy.bookstore.dto.order;
 
-import bookstore.model.Order;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import mate.academy.bookstore.model.Order;
 
 @Data
 public class UpdateStatusRequestDto {

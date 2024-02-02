@@ -1,11 +1,11 @@
-package bookstore.service;
+package mate.academy.bookstore.service;
 
-import bookstore.dto.order.OrderDto;
-import bookstore.dto.order.OrderItemDto;
-import bookstore.dto.order.PlaceOrderRequestDto;
-import bookstore.dto.order.UpdateStatusRequestDto;
 import java.util.List;
 import java.util.Set;
+import mate.academy.bookstore.dto.order.OrderDto;
+import mate.academy.bookstore.dto.order.OrderItemDto;
+import mate.academy.bookstore.dto.order.PlaceOrderRequestDto;
+import mate.academy.bookstore.dto.order.UpdateStatusRequestDto;
 import org.springframework.data.domain.Pageable;
 
 public interface OrderService {

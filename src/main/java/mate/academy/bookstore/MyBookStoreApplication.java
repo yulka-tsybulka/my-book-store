@@ -1,4 +1,4 @@
-package bookstore;
+package mate.academy.bookstore;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

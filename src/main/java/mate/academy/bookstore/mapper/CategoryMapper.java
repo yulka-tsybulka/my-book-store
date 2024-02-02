@@ -1,9 +1,9 @@
-package bookstore.mapper;
+package mate.academy.bookstore.mapper;
 
-import bookstore.config.MapperConfig;
-import bookstore.dto.category.CategoryDto;
-import bookstore.dto.category.CreateCategoryRequestDto;
-import bookstore.model.Category;
+import mate.academy.bookstore.config.MapperConfig;
+import mate.academy.bookstore.dto.category.CategoryDto;
+import mate.academy.bookstore.dto.category.CreateCategoryRequestDto;
+import mate.academy.bookstore.model.Category;
 import org.mapstruct.Mapper;
 
 @Mapper(config = MapperConfig.class)

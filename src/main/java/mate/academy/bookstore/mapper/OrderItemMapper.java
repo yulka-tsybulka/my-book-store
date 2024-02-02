@@ -1,9 +1,9 @@
-package bookstore.mapper;
+package mate.academy.bookstore.mapper;
 
-import bookstore.config.MapperConfig;
-import bookstore.dto.order.OrderItemDto;
-import bookstore.model.OrderItem;
 import java.util.Set;
+import mate.academy.bookstore.config.MapperConfig;
+import mate.academy.bookstore.dto.order.OrderItemDto;
+import mate.academy.bookstore.model.OrderItem;
 import org.mapstruct.IterableMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

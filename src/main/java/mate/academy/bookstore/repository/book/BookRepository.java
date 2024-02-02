@@ -1,7 +1,7 @@
-package bookstore.repository.book;
+package mate.academy.bookstore.repository.book;
 
-import bookstore.model.Book;
 import java.util.List;
+import mate.academy.bookstore.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
