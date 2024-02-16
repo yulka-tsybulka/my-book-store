@@ -8,10 +8,12 @@ import java.util.HashSet;
 import java.util.Set;
 import lombok.Data;
 import lombok.NonNull;
+import lombok.experimental.Accessors;
 import mate.academy.bookstore.validation.Isbn;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Accessors(chain = true)
 public class CreateBookRequestDto {
     @NonNull
     private String title;
@@ -28,4 +30,8 @@ public class CreateBookRequestDto {
     @Size(max = 255)
     private String coverImage;
     private Set<Long> categoryIds = new HashSet<>();
+
+    public CreateBookRequestDto() {
+
+    }
 }

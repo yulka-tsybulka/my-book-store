@@ -6,7 +6,7 @@ import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import mate.academy.bookstore.dto.book.BookDto;
-import mate.academy.bookstore.dto.book.BookSearchParameters;
+import mate.academy.bookstore.dto.book.BookSearchParametersDto;
 import mate.academy.bookstore.dto.book.CreateBookRequestDto;
 import mate.academy.bookstore.service.BookService;
 import org.springframework.data.domain.Pageable;
@@ -62,7 +62,7 @@ public class BookController {
     @GetMapping("/search")
     @Operation(summary = "Get the books by parameters",
             description = "Get the list of books by parameters: titles, authors")
-    public List<BookDto> searchBooks(BookSearchParameters searchParameters, Pageable pageable) {
+    public List<BookDto> searchBooks(BookSearchParametersDto searchParameters, Pageable pageable) {
         return bookService.search(searchParameters, pageable);
     }
 

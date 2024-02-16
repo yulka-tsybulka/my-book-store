@@ -54,4 +54,7 @@ public class Book {
     public Book(Long id) {
         this.id = id;
     }
+
+    public Book() {
+    }
 }
